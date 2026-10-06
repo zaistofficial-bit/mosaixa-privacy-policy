@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MOSAIXA support, help, troubleshooting, and frequently asked questions.">
+  <title>MOSAIXA Support · الدعم</title>
+  <style>
+    :root {
+      --blue:#0868d7; --navy:#071c38; --gold:#f1a51b; --paper:#fff;
+      --bg:#eef5fc; --ink:#14243a; --muted:#5d6c80; --line:#d9e5f2;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0; color:var(--ink); background:var(--bg);
+      font-family:Inter,Segoe UI,Arial,Tahoma,sans-serif; line-height:1.7;
+    }
+    a { color:var(--blue); }
+    .wrap { width:min(960px,calc(100% - 32px)); margin:auto; }
+    header {
+      color:#fff; background:linear-gradient(135deg,var(--navy),#0a376d);
+      border-bottom:5px solid var(--gold); padding:34px 0 26px;
+    }
+    .brand { display:flex; align-items:center; gap:16px; }
+    .logo {
+      width:72px; height:72px; object-fit:contain; border-radius:18px;
+      background:#fff; padding:5px; box-shadow:0 8px 25px #0004;
+    }
+    h1 { margin:0; font-size:clamp(2rem,6vw,3.2rem); line-height:1.05; }
+    .subtitle { margin:5px 0 0; color:#d8eaff; font-size:1.05rem; }
+    .toolbar { display:flex; gap:10px; margin-top:24px; flex-wrap:wrap; }
+    .lang {
+      border:1px solid #ffffff88; border-radius:999px; padding:8px 18px;
+      color:#fff; background:#ffffff18; cursor:pointer; font-weight:700;
+    }
+    .lang.active { background:var(--gold); border-color:var(--gold); color:var(--navy); }
+    main { padding:28px 0 48px; }
+    .card {
+      background:var(--paper); border:1px solid var(--line); border-radius:18px;
+      padding:clamp(20px,4vw,34px); margin:0 0 20px;
+      box-shadow:0 8px 28px #1234560d;
+    }
+    h2 { color:var(--navy); margin:0 0 12px; line-height:1.3; }
+    h3 { color:var(--blue); margin:0 0 6px; line-height:1.4; }
+    p { margin:0 0 12px; }
+    .lead { font-size:1.08rem; }
+    .notice { border-inline-start:5px solid var(--gold); background:#fff8e8; }
+    details { border-top:1px solid var(--line); padding:15px 0; }
+    details:first-of-type { border-top:0; }
+    summary { cursor:pointer; color:var(--navy); font-weight:800; }
+    details p, details ul { margin-top:9px; color:var(--muted); }
+    li { margin:5px 0; }
+    .contact {
+      display:inline-block; background:var(--blue); color:#fff; text-decoration:none;
+      font-weight:800; border-radius:10px; padding:11px 18px; margin-top:4px;
+    }
+    footer { text-align:center; color:var(--muted); padding:0 16px 32px; }
+    [data-lang="ar"] { display:none; }
+    html[lang="ar"] [data-lang="en"] { display:none; }
+    html[lang="ar"] [data-lang="ar"] { display:block; }
+    html[lang="ar"] { direction:rtl; }
+    @media (max-width:520px) {
+      .logo { width:60px; height:60px; border-radius:14px; }
+      .wrap { width:min(100% - 20px,960px); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="brand">
+        <img class="logo" src="mosaixa-logo.png" alt="MOSAIXA logo">
+        <div>
+          <h1>MOSAIXA</h1>
+          <p class="subtitle">Support · الدعم</p>
+        </div>
+      </div>
+      <div class="toolbar" aria-label="Language selection">
+        <button class="lang active" id="enButton" type="button" onclick="setLanguage('en')">English</button>
+        <button class="lang" id="arButton" type="button" onclick="setLanguage('ar')">العربية</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card" data-lang="en">
+      <h2>How can we help?</h2>
+      <p class="lead">Find quick answers about playing MOSAIXA, ads, saved progress, and creating a puzzle from your own photo.</p>
+    </section>
+    <section class="card" data-lang="ar">
+      <h2>كيف يمكننا مساعدتك؟</h2>
+      <p class="lead">ستجد هنا إجابات سريعة عن طريقة اللعب والإعلانات وحفظ التقدم وإنشاء لغز من صورتك الشخصية.</p>
+    </section>
+
+    <section class="card" data-lang="en">
+      <h2>Frequently asked questions</h2>
+      <details open>
+        <summary>How do I play?</summary>
+        <p>Move every piece to its exact position in the 10×10 picture. Rotate pieces when necessary. Complete the picture to unlock the next puzzle.</p>
+      </details>
+      <details>
+        <summary>What happens after I complete all 30 puzzles?</summary>
+        <p>Select <strong>Create Your Puzzle</strong> or open <strong>My Photo</strong> to turn a photo from your device into a new 10×10 puzzle.</p>
+      </details>
+      <details>
+        <summary>How does My Photo work?</summary>
+        <p>Choose a clear photo with varied details. MOSAIXA crops it to a square and creates a puzzle. Processing and storage take place locally on your device; your photo is not uploaded by MOSAIXA.</p>
+      </details>
+      <details>
+        <summary>How do I replay or replace my saved photo?</summary>
+        <p>Open <strong>My Photo</strong> and choose <strong>Play Saved Photo</strong>. Selecting a different photo replaces the previously saved photo.</p>
+      </details>
+      <details>
+        <summary>What does the rewarded ad do?</summary>
+        <p>The rewarded ad is optional and gives you one additional piece rotation. It requires an internet connection and an available ad.</p>
+      </details>
+      <details>
+        <summary>Why did an ad not appear?</summary>
+        <p>Check your internet connection and try again later. Ad availability varies by region and time. The main game remains playable if no ad is available.</p>
+      </details>
+      <details>
+        <summary>Where is my progress stored?</summary>
+        <p>Your puzzle progress, settings, and saved custom photo are stored locally on your device. They can be lost if you clear the app's data or uninstall it.</p>
+      </details>
+      <details>
+        <summary>The app is not working as expected. What should I try?</summary>
+        <ul>
+          <li>Close MOSAIXA completely, then reopen it.</li>
+          <li>Check your internet connection if the issue involves ads.</li>
+          <li>Restart your device and install the latest available app update.</li>
+          <li>If photo selection fails, confirm that the system photo picker can access the selected image and that the device has free storage.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card" data-lang="ar">
+      <h2>الأسئلة الشائعة</h2>
+      <details open>
+        <summary>كيف ألعب؟</summary>
+        <p>انقل كل قطعة إلى موضعها الصحيح تمامًا في الصورة المكوّنة من 10×10 قطع، ودوّر القطع عند الحاجة. أكمل الصورة لفتح اللغز التالي.</p>
+      </details>
+      <details>
+        <summary>ماذا يحدث بعد إكمال الألغاز الثلاثين؟</summary>
+        <p>اختر <strong>CREATE YOUR PUZZLE</strong> أو افتح صفحة <strong>MY PHOTO</strong> لتحويل صورة من جهازك إلى لغز جديد من 10×10 قطع.</p>
+      </details>
+      <details>
+        <summary>كيف تعمل ميزة MY PHOTO؟</summary>
+        <p>اختر صورة واضحة ومتنوعة التفاصيل. تقص MOSAIXA الصورة إلى مربع وتنشئ منها لغزًا. تتم المعالجة والحفظ محليًا على جهازك، ولا ترفع MOSAIXA صورتك إلى الإنترنت.</p>
+      </details>
+      <details>
+        <summary>كيف أعيد لعب الصورة المحفوظة أو أستبدلها؟</summary>
+        <p>افتح <strong>MY PHOTO</strong> ثم اختر <strong>Play Saved Photo</strong>. عند اختيار صورة مختلفة، تستبدل الصورة المحفوظة السابقة.</p>
+      </details>
+      <details>
+        <summary>ماذا يمنحني إعلان المكافأة؟</summary>
+        <p>إعلان المكافأة اختياري ويمنحك تدويرًا إضافيًا واحدًا للقطع. يتطلب اتصالًا بالإنترنت وتوفّر إعلان.</p>
+      </details>
+      <details>
+        <summary>لماذا لم يظهر الإعلان؟</summary>
+        <p>تحقق من اتصال الإنترنت ثم حاول لاحقًا. يختلف توفر الإعلانات حسب المنطقة والوقت. تبقى اللعبة الأساسية قابلة للعب إذا لم يتوفر إعلان.</p>
+      </details>
+      <details>
+        <summary>أين يُحفظ تقدمي؟</summary>
+        <p>يُحفظ تقدم الألغاز والإعدادات والصورة الشخصية المحفوظة محليًا على جهازك. قد تفقد هذه البيانات إذا مسحت بيانات التطبيق أو ألغيت تثبيته.</p>
+      </details>
+      <details>
+        <summary>التطبيق لا يعمل كما هو متوقع، ماذا أجرب؟</summary>
+        <ul>
+          <li>أغلق MOSAIXA بالكامل ثم افتحها مجددًا.</li>
+          <li>تحقق من الإنترنت إذا كانت المشكلة متعلقة بالإعلانات.</li>
+          <li>أعد تشغيل الجهاز وثبّت أحدث تحديث متاح للتطبيق.</li>
+          <li>إذا تعذر اختيار صورة، فتأكد من قدرة منتقي الصور في النظام على الوصول إليها ومن وجود مساحة تخزين كافية.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card notice" data-lang="en">
+      <h2>Privacy</h2>
+      <p>Your custom photo and game progress are stored locally. For information about advertising and data processing, read the <a href="index.html">MOSAIXA Privacy Policy</a>.</p>
+    </section>
+    <section class="card notice" data-lang="ar">
+      <h2>الخصوصية</h2>
+      <p>تُحفظ صورتك الشخصية وتقدم اللعبة محليًا. لمعرفة معلومات الإعلانات ومعالجة البيانات، اقرأ <a href="index.html">سياسة خصوصية MOSAIXA</a>.</p>
+    </section>
+
+    <section class="card" data-lang="en">
+      <h2>Still need help?</h2>
+      <p>Describe the issue, your device model, Android version, and the steps that caused it. Do not send passwords or secret keys.</p>
+      <a class="contact" href="mailto:zaist.official@gmail.com?subject=MOSAIXA%20Support">Email support</a>
+    </section>
+    <section class="card" data-lang="ar">
+      <h2>ما زلت بحاجة إلى مساعدة؟</h2>
+      <p>اكتب وصف المشكلة وطراز جهازك وإصدار Android والخطوات التي أدت إليها. لا ترسل كلمات مرور أو مفاتيح سرية.</p>
+      <a class="contact" href="mailto:zaist.official@gmail.com?subject=MOSAIXA%20Support">مراسلة الدعم</a>
+    </section>
+  </main>
+
+  <footer>
+    <span data-lang="en">© 2026 ZAIST · MOSAIXA — Piece Together Beauty</span>
+    <span data-lang="ar">© 2026 ZAIST · MOSAIXA — اجمع قطع الجمال</span>
+  </footer>
+
+  <script>
+    function setLanguage(language) {
+      document.documentElement.lang = language;
+      document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
+      document.getElementById('enButton').classList.toggle('active', language === 'en');
+      document.getElementById('arButton').classList.toggle('active', language === 'ar');
+      try { localStorage.setItem('mosaixa-support-language', language); } catch (_) {}
+    }
+    try {
+      const saved = localStorage.getItem('mosaixa-support-language');
+      if (saved === 'ar' || saved === 'en') setLanguage(saved);
+    } catch (_) {}
+  </script>
+</body>
+</html>
